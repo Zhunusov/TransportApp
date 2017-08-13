@@ -1,0 +1,58 @@
+﻿@using Resources;
+@{
+    ViewBag.Title = Resource.Contacts;
+}
+<div class="container-fluid bg-grey">
+    <h2 class="text-center">@Resource.Contacts</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <p>@Resource.ContactDescription.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> @Resource.ContactLocation</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +375 123456789</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>artur.zhunusov@gmail.com</p>
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="@Resource.ContactName" type="text" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <input class="form-control" id="email" value="@User.Identity.Name" name="email" placeholder="@Resource.EmailDisplay" type="email" required>
+                    }
+                    else
+                    {
+                        <input class="form-control" id="email" name="email" placeholder="@Resource.EmailDisplay" type="email" required>
+                    }
+                </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="@Resource.ContactComment" rows="5"></textarea><br>
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">@Resource.BtnSend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+                                var myCenter = new google.maps.LatLng(53.916189, 27.556552);
+                                var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+                            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQMvMFAgidVHL8QuCxZHnvg-hQKtUy0EM&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+

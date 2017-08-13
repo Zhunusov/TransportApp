@@ -1,0 +1,32 @@
+﻿@using TransportApp.WEB.Models
+@model UserRegDataViewModel
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#panelGeneralRegData">@Resources.Resource.UserAccountGeneralRegData</a></li>
+    <li><a data-toggle="tab" href="#panelGeneralDoc">@Resources.Resource.UserAccountGeneralDoc</a></li>
+    <li><a data-toggle="tab" href="#panelGeneralContacts">@Resources.Resource.UserAccountGeneralContacts</a></li>
+    <li><a data-toggle="tab" href="#panelGeneralActivities">@Resources.Resource.UserAccountGeneralActivities</a></li>
+    <li><a data-toggle="tab" href="#panelGeneralOther">@Resources.Resource.UserAccountGeneralOther</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="panelGeneralRegData" class="tab-pane fade in active">
+        @Html.Action("RegistrationData")
+    </div>
+    <div id="panelGeneralDoc" class="tab-pane fade">
+        <h3>@Resources.Resource.PanelTitle @Resources.Resource.UserAccountGeneralDoc</h3>
+        <p>@Resources.Resource.PanelContent @Resources.Resource.UserAccountGeneralDoc...</p>
+    </div>
+    <div id="panelGeneralContacts" class="tab-pane fade">
+        <h3>@Resources.Resource.PanelTitle @Resources.Resource.UserAccountGeneralContacts</h3>
+        <p>@Resources.Resource.PanelContent @Resources.Resource.UserAccountGeneralContacts...</p>
+    </div>
+    <div id="panelGeneralActivities" class="tab-pane fade">
+        <h3>@Resources.Resource.PanelTitle @Resources.Resource.UserAccountGeneralActivities</h3>
+        <p>@Resources.Resource.PanelContent @Resources.Resource.UserAccountGeneralActivities...</p>
+    </div>
+    <div id="panelGeneralOther" class="tab-pane fade">
+        <h3>@Resources.Resource.PanelTitle @Resources.Resource.UserAccountGeneralOther</h3>
+        <p>@Resources.Resource.PanelContent @Resources.Resource.UserAccountGeneralOther...</p>
+    </div>
+</div>

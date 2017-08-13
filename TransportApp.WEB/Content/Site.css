@@ -1,0 +1,151 @@
+﻿body {    
+    padding:0px;
+    margin:0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;   
+    padding-top:50px;        
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 250px;
+    margin-right: 10px;
+}
+
+/* цвет фона и рамки навигационного меню */
+.navbar-inverse{
+    background-color:#444;
+    border-color:#444; 
+    margin-bottom:0px;          
+}
+
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-inverse .navbar-brand{
+    color:#ffffff;    
+}
+
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus{
+    color:#f8a141;
+}
+
+/* Цвет пунктов навигационного меню */
+.navbar-inverse .navbar-nav > li > a{
+    color:#ffffff;
+}
+
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{
+    color:#f8a141;
+}
+
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus{
+    background-color:#191919;
+    color:#191919;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus{
+    background-color:#444;
+    color:#f8a141;
+}
+
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #f8a141;
+    border-bottom-color: #f8a141;
+}
+
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+.navbar-inverse .navbar-nav > .open > a .caret, 
+.navbar-inverse .navbar-nav > .open > a:hover .caret, 
+.navbar-inverse .navbar-nav > .open > a:focus .caret {
+    border-top-color: #f8a141;
+    border-bottom-color: #f8a141;
+}
+
+/* Цвет пунктов меню в раскрывающихся списках */
+@media (max-with:768px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #000000;                
+    }
+}
+
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #f8a141;
+        background-color: #ffffff;        
+    }
+
+.btn-default{
+    color:#000000;
+    background-color:#f5bd39;
+    border-color:#f5bd39;
+}
+
+.btn-default:hover,
+.btn-default:focus{
+    color:#000000;
+    background-color:#fbca56;
+    border-color:#f5bd39;
+}
+
+.dropdown-menu {
+    min-width:100px;    
+}
+
+.navbar-form{
+    margin-right:-30px;
+}
+
+.jumbotron{
+    margin-top:30px;
+}
+
+#about{
+    padding-top:80px;
+}
+
+li.ui-menu-item {
+        font-weight:500;
+    }
+
+/* Tooltip */
+.img-circle .img-responsive + .tooltip > .tooltip-inner {
+      background-color: #73AD21; 
+      color: #FFFFFF;  
+      border: 1px solid green;      
+      padding: 3px;
+      font-size: 10px;
+  }
+ /* Tooltip on top */
+.img-circle .img-responsive  + .tooltip.top > .tooltip-arrow {
+      border-top: 5px solid green;
+  }
+
+.form-control + .cargoes{
+    margin-right: 10px;
+    width: 250px;
+}

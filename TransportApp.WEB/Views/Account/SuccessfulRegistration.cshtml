@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = Resources.Resource.RegisterTitle;
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@Html.AntiForgeryToken()
+<div class="alert alert-success">
+    @Resources.Resource.SuccessfulRegistrationTitle, @User.Identity.Name!
+</div>

@@ -1,0 +1,32 @@
+﻿/*Настройка стилей панели "Меню пользователя"*/
+
+.nav-pills, 
+.nav-tabs{
+    display:block;    
+}
+
+.nav-pills > li > a,
+.nav-tabs > li > a{
+    color:#000000;        
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #ffeec8;
+}
+
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus{
+    color: #000000;
+    background-color: #f5bd39;
+}
+
+.tab-content, .pill-content {
+    display: block;
+    padding:15px;
+}

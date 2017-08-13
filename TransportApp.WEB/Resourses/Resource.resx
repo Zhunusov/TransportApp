@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutApp" xml:space="preserve">
+    <value>О бирже</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="About_Exchange_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\About_Exchange_en.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="About_Exchange_ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\About_Exchange_ru.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Биржа транспортных перевозок</value>
+  </data>
+  <data name="Code2" xml:space="preserve">
+    <value>ru</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="Contact_Info_en" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contact_Info_en.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="Contact_Info_ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contact_Info_ru.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>При обработке запроса произошла ошибка</value>
+  </data>
+  <data name="IndexHeaderHomePage" xml:space="preserve">
+    <value>Главная страница</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="ShortAppTitle" xml:space="preserve">
+    <value>БТП</value>
+  </data>
+  <data name="HeadSlide1" xml:space="preserve">
+    <value>Здесь будет заголовок 1 слайда</value>
+  </data>
+  <data name="HeadSlide2" xml:space="preserve">
+    <value>Здесь будет заголовок 2 слайда</value>
+  </data>
+  <data name="HeadSlide3" xml:space="preserve">
+    <value>Здесь будет заголовок 3 слайда</value>
+  </data>
+  <data name="SignInBtn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Техническая поддержка</value>
+  </data>
+  <data name="TextSlide1" xml:space="preserve">
+    <value>Описание 1 слайда</value>
+  </data>
+  <data name="TextSlide2" xml:space="preserve">
+    <value>Описание 2 слайда</value>
+  </data>
+  <data name="TextSlide3" xml:space="preserve">
+    <value>Описание 3 слайда</value>
+  </data>
+  <data name="EmailDisplay" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="PasswordDisplay" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PasswordValidation" xml:space="preserve">
+    <value>Значение {0} должно содержать не менее {2} символов.</value>
+  </data>
+  <data name="RegisterBtnTitle" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="RegisterDescription" xml:space="preserve">
+    <value>Создайте новую учетную запись</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="CargoesTitle" xml:space="preserve">
+    <value>Грузы</value>
+  </data>
+  <data name="ConfirmPasswordCompare" xml:space="preserve">
+    <value>Пароль и его подтверждение не совпадают</value>
+  </data>
+  <data name="ConfirmPasswordDisplay" xml:space="preserve">
+    <value>Подтверждение пароля</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Поле {0}  должно быть заполнено</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>Поле {0}  не содержит допустимый адрес электронной почты.</value>
+  </data>
+  <data name="MenuTitle" xml:space="preserve">
+    <value>Меню</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Поле {0}  должно быть заполнено</value>
+  </data>
+  <data name="RememberMeDisplay" xml:space="preserve">
+    <value>Запомнить меня</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="TransportTitle" xml:space="preserve">
+    <value>Транспорт</value>
+  </data>
+  <data name="LoginDescription" xml:space="preserve">
+    <value>Используйте учетную запись для входа</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Выполнить вход</value>
+  </data>
+  <data name="SignOutBtn" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="SuccessfulRegistrationTitle" xml:space="preserve">
+    <value>Поздравляем с успешной регистрацией</value>
+  </data>
+  <data name="UserEmailExisted" xml:space="preserve">
+    <value>Данный адрес электронной почты уже занят</value>
+  </data>
+  <data name="CatalogTitle" xml:space="preserve">
+    <value>Каталог фирм</value>
+  </data>
+  <data name="EmailExceptionUnknown" xml:space="preserve">
+    <value>Не указан адрес электронной почты пользователя</value>
+  </data>
+  <data name="ExchangeServicesTitle" xml:space="preserve">
+    <value>Услуги биржи</value>
+  </data>
+  <data name="ForumTitle" xml:space="preserve">
+    <value>Форум</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>Новости биржи</value>
+  </data>
+  <data name="PasswordExceptionIncorrect" xml:space="preserve">
+    <value>Введен неверный пароль</value>
+  </data>
+  <data name="UserAreaTitle" xml:space="preserve">
+    <value>Кабинет пользователя</value>
+  </data>
+  <data name="UserExceptionNotFound" xml:space="preserve">
+    <value>Пользователь не найден</value>
+  </data>
+  <data name="UserAccountEmployees" xml:space="preserve">
+    <value>Сотрудники</value>
+  </data>
+  <data name="UserAccountEntries" xml:space="preserve">
+    <value>Мои заявки</value>
+  </data>
+  <data name="UserAccountGeneral" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="UserAccountGeneralActivities" xml:space="preserve">
+    <value>Виды деятельности</value>
+  </data>
+  <data name="UserAccountGeneralContacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="UserAccountGeneralDoc" xml:space="preserve">
+    <value>Документы</value>
+  </data>
+  <data name="UserAccountGeneralOther" xml:space="preserve">
+    <value>Прочее</value>
+  </data>
+  <data name="UserAccountGeneralRegData" xml:space="preserve">
+    <value>Регистрационные данные</value>
+  </data>
+  <data name="UserAccountMessages" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="UserAccountPartners" xml:space="preserve">
+    <value>Партнеры</value>
+  </data>
+  <data name="UserAccountTitle" xml:space="preserve">
+    <value>Личный кабинет пользователя</value>
+  </data>
+  <data name="AboutAppDescription" xml:space="preserve">
+    <value>Здесь будет размещаться краткое описание деятельности биржи</value>
+  </data>
+  <data name="BtnGetInTouch" xml:space="preserve">
+    <value>Связаться с поддержкой</value>
+  </data>
+  <data name="PanelContent" xml:space="preserve">
+    <value>Здесь будет размещаться содержимое панели </value>
+  </data>
+  <data name="PanelTitle" xml:space="preserve">
+    <value>Панель</value>
+  </data>
+  <data name="PricingPaymentPlan" xml:space="preserve">
+    <value>Выберите наиболее подходящий для вас тарифный план </value>
+  </data>
+  <data name="PricingTitle" xml:space="preserve">
+    <value>Цены на услуги биржи</value>
+  </data>
+  <data name="UserAccountEmployeesAll" xml:space="preserve">
+    <value>Все сотрудники</value>
+  </data>
+  <data name="UserAccountEmployeesInfo" xml:space="preserve">
+    <value>Информация о сотрудниках</value>
+  </data>
+  <data name="UserAccountEntriesCargo" xml:space="preserve">
+    <value>Заявки на грузы</value>
+  </data>
+  <data name="UserAccountEntriesTransport" xml:space="preserve">
+    <value>Заявки на транспорт</value>
+  </data>
+  <data name="UserAccountMessagesIncoming" xml:space="preserve">
+    <value>Входящие сообщения</value>
+  </data>
+  <data name="UserAccountMessagesOutgoing" xml:space="preserve">
+    <value>Исходящие сообщения</value>
+  </data>
+  <data name="UserAccountMessagesUnread" xml:space="preserve">
+    <value>Непрочитанные сообщения</value>
+  </data>
+  <data name="UserAccountPartnersIncOffes" xml:space="preserve">
+    <value>Поступающие предложения партнерства</value>
+  </data>
+  <data name="UserAccountPartnersMy" xml:space="preserve">
+    <value>Мои партнеры</value>
+  </data>
+  <data name="UserAccountPartnersOutOffes" xml:space="preserve">
+    <value>Исходящие предложения партнерства</value>
+  </data>
+  <data name="AddressDisplay" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="AddressRequired" xml:space="preserve">
+    <value>Поле  {0}  должно быть заполнено</value>
+  </data>
+  <data name="BizDescriptionDisplay" xml:space="preserve">
+    <value>Описание вида деятельности</value>
+  </data>
+  <data name="BizNameDisplay" xml:space="preserve">
+    <value>Наименование организации</value>
+  </data>
+  <data name="BizNameRequired" xml:space="preserve">
+    <value>Поле {0} должно быть заполнено</value>
+  </data>
+  <data name="BizStatusDisplay" xml:space="preserve">
+    <value>Статус активности</value>
+  </data>
+  <data name="BizStatusRequired" xml:space="preserve">
+    <value>Поле  {0}  должно быть заполнено</value>
+  </data>
+  <data name="BizUniqueNumberDisplay" xml:space="preserve">
+    <value>Уникальный номер налогоплательщика</value>
+  </data>
+  <data name="BizUniqueNumberRequired" xml:space="preserve">
+    <value>Поле  {0}  должно быть заполнено</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="BizUniqueNumberValidation" xml:space="preserve">
+    <value>Значение {0} должно содержать {2} символов.</value>
+  </data>
+  <data name="CityNameDisplay" xml:space="preserve">
+    <value>Населенный пункт</value>
+  </data>
+  <data name="CountryNameDisplay" xml:space="preserve">
+    <value>Страна (местонахождения)</value>
+  </data>
+  <data name="RegionNameDisplay" xml:space="preserve">
+    <value>Область/Регион</value>
+  </data>
+  <data name="CityNameRequired" xml:space="preserve">
+    <value>Поле 'Населенный пункт'  должно быть заполнено</value>
+  </data>
+  <data name="CountryNameRequired" xml:space="preserve">
+    <value>Поле 'Страна (местонахождения)'  должно быть заполнено</value>
+  </data>
+  <data name="RegionNameRequired" xml:space="preserve">
+    <value>Поле 'Область/Регион'  должно быть заполнено</value>
+  </data>
+  <data name="ChangeAvatar" xml:space="preserve">
+    <value>Изменить изображение профиля</value>
+  </data>
+  <data name="defaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhunusovAvatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Изображение 101.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b8f3786f9f4e7b5f9a201dc1c1934e8c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b8f3786f9f4e7b5f9a201dc1c1934e8c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="po_territorii_litvy_perevozyatsya_opasnye_gruzy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\po-territorii-litvy-perevozyatsya-opasnye-gruzy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sborgruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sborgruz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shutterstock_135831281" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutterstock_135831281.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whatsapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whatsapp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1366184373_skoroportyaschiesya_gruzy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1366184373_skoroportyaschiesya-gruzy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_234284" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\234284.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AboutOurOffer" xml:space="preserve">
+    <value>Что предлагает биржа</value>
+  </data>
+  <data name="AboutPresentation" xml:space="preserve">
+    <value>Здесь будет текст о бирже</value>
+  </data>
+  <data name="BtnSend" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="ContactComment" xml:space="preserve">
+    <value>Текст сообщения</value>
+  </data>
+  <data name="ContactDescription" xml:space="preserve">
+    <value>Оставьте свои контактные данные, и мы с вами обязательно свяжемся</value>
+  </data>
+  <data name="ContactLocation" xml:space="preserve">
+    <value>г.Минск, Республика Беларусь</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="AboutArg" xml:space="preserve">
+    <value>Довод</value>
+  </data>
+  <data name="AboutArgDescription" xml:space="preserve">
+    <value>Детализация довода</value>
+  </data>
+  <data name="CapMax" xml:space="preserve">
+    <value>Максимальный объем, м3</value>
+  </data>
+  <data name="CapMin" xml:space="preserve">
+    <value>Минимальный объем, м3</value>
+  </data>
+  <data name="CargoDestination" xml:space="preserve">
+    <value>Место назначения</value>
+  </data>
+  <data name="CargoDimentions" xml:space="preserve">
+    <value>Габариты груза</value>
+  </data>
+  <data name="CargoFilter" xml:space="preserve">
+    <value>Фильтр поиска грузов</value>
+  </data>
+  <data name="CargoLoadingPlace" xml:space="preserve">
+    <value>Место погрузки</value>
+  </data>
+  <data name="CargoSearch" xml:space="preserve">
+    <value>Поиск для пользователя</value>
+  </data>
+  <data name="CargoTitle" xml:space="preserve">
+    <value>Грузы биржи</value>
+  </data>
+  <data name="ChooseCity" xml:space="preserve">
+    <value>Любой город</value>
+  </data>
+  <data name="ChooseRegion" xml:space="preserve">
+    <value>Любой регион</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Дата окончания периода</value>
+  </data>
+  <data name="SeachPeriod" xml:space="preserve">
+    <value>Период поиска</value>
+  </data>
+  <data name="SelectCountryDestination" xml:space="preserve">
+    <value>Выберите страну назначения</value>
+  </data>
+  <data name="SelectCountryDispatch" xml:space="preserve">
+    <value>Выберите страну отпраки</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Дата начала периода</value>
+  </data>
+  <data name="WeightMax" xml:space="preserve">
+    <value>Максимальный вес, тонн</value>
+  </data>
+  <data name="WeightMin" xml:space="preserve">
+    <value>Минимальный вес, тонн</value>
+  </data>
+</root>

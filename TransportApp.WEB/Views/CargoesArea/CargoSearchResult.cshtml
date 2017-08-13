@@ -1,0 +1,136 @@
+﻿@model IEnumerable<TransportApp.WEB.Models.CargoSeachResultViewModel>
+    @using System.Globalization;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" media="screen" />
+</head>
+<body>    
+    <div id="searchresults">
+        @foreach (var item in Model)
+        {
+            <div class="container">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-9 well" style="padding:3px;">
+                    <div class="col-md-3" style="margin-top:3px; padding:0px;">
+                        <div class="block" style="padding:5px; text-align:center; margin:0px;">
+                            <p><b>@item.UserBizName</b></p>
+                            <div class="col-md-5" style="padding:5px;">
+                                <img src="~/Resources/person.png" class="img-circle img-responsive" height="75" width="75" alt="Avatar" />
+                            </div>                           
+                            <div class="col-md-7" style="padding:3px;">
+                                @if (item.PhonesDTO.Count > 0)
+                                {
+                                    foreach (var phone in item.PhonesDTO)
+                                    {
+                                        <small>+375 @phone.PhoneNumber</small>
+                                        <div class="icons">
+                                            @if (phone.IsViberSupported)
+                                            {
+                                                <div class="col-md-2" style="padding:0px;">
+                                                    <img src="~/Resources/viber.png" class="img-responsive" height="15" width="15" />
+                                                </div>
+                                            }
+                                            @if (phone.IsWhatUpSupported)
+                                            {
+                                                <div class="col-md-2" style="padding:0px;">
+                                                    <img src="~/Resources/whatsapp.png" class="img-responsive" height="15" width="15" />
+                                                </div>
+                                            }
+                                            @if (phone.IsViberSupported || phone.IsWhatUpSupported)
+                                            {
+                                                <br />
+                                            }
+                                        </div>
+                                    }
+                                }                               
+                                
+                            </div>
+                            <br /><br /><br /><br />
+                            <span class="glyphicon glyphicon-star" style="color:darkorange;"></span>
+                            <span class="glyphicon glyphicon-star" style="color:darkorange;"></span>
+                            <span class="glyphicon glyphicon-star" style="color:darkorange;"></span>
+                            <span class="glyphicon glyphicon-star" style="color:darkorange;"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 block" style="margin-top:3px; padding:5px; margin-bottom:0px">
+                        <table class="table table-bordered" style="margin-bottom:0px;">
+                            <tbody>
+                                <tr>
+                                    <td><b>Направление:</b></td>
+                                    <td><small><b>@item.CountryShipmentISOCode2 - @item.CountryArrivalISOCode2. </b>@item.CityShipmentName (@item.RegionShipmentName) - @item.CityArrivalName (@item.RegionArrivalName)</small></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Сроки:</b></td>
+                                    <td><small>@item.ShipmentDateStart.ToShortDateString() - @item.ShipmentDateFinished.ToShortDateString()</small></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Описание груза:</b></td>
+                                    <td><small>@item.Name,@item.WeightMin - @item.WeightMax т, @item.SizeMin - @item.SizeMax м3, @item.CargoFrequency, @item.AdditionalInfo.</small></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Требования к авто:</b></td>
+                                    <td><small>Тент, длина 6 метров, высота 2,5 метра</small></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Оплата:</b></td>
+                                    <td><small>@item.PaymentMethod, @item.SumOfPayment@item.CurrencySymbol</small></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3 block" style="margin-top:3px; padding:5px; margin-bottom:0px">
+                        @if (DateTime.Compare(item.DateOfFormation, DateTime.Now.AddHours(-3)) > 0)
+                        {
+                            <div class="cargoinfo text-right text-danger"><b>New!</b></div>
+                        }
+                        else
+                        {
+                            <div class="cargoinfo text-right text-info"><b>Normal!</b></div>
+                        }
+
+                        <div class="cargoinfo data text-right"><small>@item.DateOfFormation</small></div>
+                        <br />
+                        <div class="col-md-4" style="padding:0px;">
+                            <a href="~/Resources/1366184373_skoroportyaschiesya-gruzy.jpg" class="fancyimage" data-fancybox-group="group">
+                                <img class="img-responsive" src="~/Resources/1366184373_skoroportyaschiesya-gruzy.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4" style="padding:0px;">
+                            <a href="~/Resources/234284.jpeg" class="fancyimage" data-fancybox-group="group">
+                                <img class="img-responsive" src="~/Resources/234284.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4" style="padding:0px;">
+                            <a href="~/Resources/b8f3786f9f4e7b5f9a201dc1c1934e8c.jpg" class="fancyimage" data-fancybox-group="group">
+                                <img class="img-responsive" src="~/Resources/b8f3786f9f4e7b5f9a201dc1c1934e8c.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-4" style="padding:0px;">
+                            <a href="~/Resources/po-territorii-litvy-perevozyatsya-opasnye-gruzy.jpg" class="fancyimage" data-fancybox-group="group">
+                                <img class="img-responsive" src="~/Resources/po-territorii-litvy-perevozyatsya-opasnye-gruzy.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }        
+    </div>  
+    <br />
+    <div class="text-center">
+        <div id="pagination" class="pagination">
+
+        </div> 
+    </div>
+       
+    <script src="~/Scripts/jquery.paging.min.js"></script>
+    <script src="~/js/MyFuncAutoComplete.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+</body>
+</html>

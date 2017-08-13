@@ -1,0 +1,78 @@
+﻿@using Resources;
+@{
+    ViewBag.Title = Resource.AboutApp;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="~/Content/AboutStyle.css" rel="stylesheet" />
+    </head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>@Resource.AboutApp</h2>
+                <h4>@Resource.AboutAppDescription</h4>
+                <p>...</p>
+                <button class="btn btn-default btn-lg">@Resource.BtnGetInTouch</button>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-globe logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>@Resource.AboutPresentation</h2>                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center">       
+        <h4>@Resource.AboutOurOffer</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-off logo-small"></span>
+                <h4>@Resource.AboutArg 1</h4>
+                <p>@Resource.AboutArgDescription 1</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-heart logo-small"></span>
+                <h4>@Resource.AboutArg 2</h4>
+                <p>@Resource.AboutArgDescription 2</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-lock logo-small"></span>
+                <h4>@Resource.AboutArg 3</h4>
+                <p>@Resource.AboutArgDescription 3</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-leaf logo-small"></span>
+                <h4>@Resource.AboutArg 4</h4>
+                <p>@Resource.AboutArgDescription 4</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-certificate logo-small"></span>
+                <h4>@Resource.AboutArg 5</h4>
+                <p>@Resource.AboutArgDescription 5</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-wrench logo-small"></span>
+                <h4>@Resource.AboutArg 6</h4>
+                <p>@Resource.AboutArgDescription 6</p>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

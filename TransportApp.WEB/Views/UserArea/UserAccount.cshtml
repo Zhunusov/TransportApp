@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = Resources.Resource.UserAreaTitle;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/UserMenuStyle.css" rel="stylesheet" /> 
+</head>
+<body>
+    @if (Request.IsAuthenticated)
+        {
+            @Html.AntiForgeryToken()
+            { Html.RenderPartial("UserMenuPartial"); }            
+    }
+    else
+    {
+            @Html.Partial("Login");
+        }
+</body>
+</html>
+
+   
+

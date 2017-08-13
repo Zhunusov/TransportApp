@@ -1,0 +1,8 @@
+﻿@if (Request.IsAuthenticated)
+{
+    @Html.Partial("AuthenticatedPartial")
+}
+else
+{
+    @Html.Partial("NotAuthenticatedPartial")
+}

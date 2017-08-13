@@ -1,0 +1,287 @@
+﻿@model TransportApp.WEB.Models.CargoFilterModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .form-control + .cargoes {
+            margin-right: 10px;
+            width: 250px;
+        }
+
+        .table-bordered > tbody > tr > td {
+            padding: 3px;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Грузы биржи</h2>
+        <br />
+        @using (Ajax.BeginForm("CargoSearchResult", new AjaxOptions { UpdateTargetId = "results" }))
+        {
+<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#cargoesFilter">
+                <span class="glyphicon glyphicon-collapse-down"></span> Фильтр поиска грузов
+            </button>
+            <div id="cargoesFilter" class="collapse">
+                <br />
+                <div class="panel-group col-md-12" style="padding:0px;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            @if (Request.IsAuthenticated)
+                            {
+<h4 class="panel-title"><b><i>Поиск для пользователя @User.Identity.Name</i></b></h4>
+                            }
+                            else
+                            {
+                                <h4 class="panel-title">
+                                    <b>
+                                        <i>
+                                            @Html.ActionLink(Resources.Resource.LoginTitle, "Login", "Account") /
+                                            @Html.ActionLink(Resources.Resource.RegisterTitle, "Register", "Account")
+                                        </i>
+                                    </b>
+                                </h4>
+                            }
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <b>Место погрузки: </b><br />
+                                <select class="form-control cargoes col-md-4" id="CoutriesArr" name="CoutriesArr">
+                                    <option value="" @*disabled selected hidden*@>Выберите страну отправки</option>
+                                    <option disabled>---------------------</option>
+                                    @foreach (var item in ViewBag.Countries)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                               @Html.ValidationMessage("CoutriesArr", "", new { @class = "text-danger" })
+                                <select class="form-control cargoes col-md-4" id="RegionsArr" name="RegionsArr" disabled>
+                                    <option value="" @*disabled selected hidden*@ class="regionArr">Любой регион</option>
+                                    <option disabled class="regionArr">---------------------</option>
+                                </select>
+                                <select class="form-control cargoes col-md-4" id="CitiesArr" disabled name="CitiesArr">
+                                    <option value="" @*disabled selected hidden*@ class="cityArr">Любой город</option>
+                                    <option disabled class="cityArr">---------------------</option>
+                                </select>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <b>Место назначения: </b><br />
+                                <select class="form-control cargoes col-md-4" id="CoutriesDest" name="CoutriesDest">
+                                    <option value="">Выберите страну назначения</option>
+                                    <option disabled>---------------------</option>
+                                    @foreach (var item in ViewBag.Countries)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                                <select class="form-control cargoes col-md-4" id="RegionsDest" disabled="disabled" name="RegionsDest">
+                                    <option value="" class="regionDest">Любой регион</option>
+                                    <option disabled class="regionDest">---------------------</option>
+                                </select>
+                                <select class="form-control cargoes col-md-4" id="CitiesDest" disabled="disabled" name="CitiesDest">
+                                    <option value="" class="cityDest">Любой город</option>
+                                    <option disabled class="cityDest">---------------------</option>
+                                </select>
+                            </div>
+                            <br /><br />
+                            <div class="form-group">
+                                <b>Период поиска: </b><br />
+                                <input id="DatePikerBegin" type="text" class="form-control cargoes col-md-4" placeholder="Дата начала периода" name="DatePikerBegin">
+                                <input id="DatePikerEnd" type="text" class="form-control cargoes col-md-4" placeholder="Дата окончания периода" name="DatePikerEnd">
+                            </div>
+                            <br /><br />
+                            <div class="form-group">
+                                <b>Габариты груза: </b><br />
+                                <select class="form-control cargoes col-md-3" id="WeightMin" name="WeightMin">
+                                    <option value="" disabled selected hidden>Минимальный вес, тонн</option>
+                                    <option value="" disabled></option>
+                                    @foreach (var item in ViewBag.Weight)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                                <select class="form-control cargoes col-md-3" id="WeightMax" name="WeightMax">
+                                    <option value="" disabled selected hidden>Максимальный вес, тонн</option>
+                                    <option value="" disabled></option>
+                                    @foreach (var item in ViewBag.Weight)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                                <select class="form-control cargoes col-md-3" id="CapacityMin" name="CapacityMin">
+                                    <option value="" disabled selected hidden>Минимальный объем, м3</option>
+                                    <option value="" disabled></option>
+                                    @foreach (var item in ViewBag.Capacity)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                                <select class="form-control cargoes col-md-3" id="CapacityMax" name="CapacityMax">
+                                    <option value="" disabled selected hidden>Максимальный объем, м3</option>
+                                    <option value="" disabled></option>
+                                    @foreach (var item in ViewBag.Capacity)
+                                    {
+<option>@item</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <input type="submit" class="btn btn-success" value="Осуществить поиск" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <br /><br />
+    <div id="results">
+
+    </div>
+    <script src="~/js/MyFuncAutoComplete.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#CoutriesArr').change(function () {
+                $('#CitiesArr').attr('disabled', true);
+                $('#CitiesArr option').remove('.cityArr');
+                $('#CitiesArr').append('<option value="" class="cityArr">Любой город</option>');
+                $('#CitiesArr').append('<option disabled class="cityArr">---------------------</option> ');
+
+                if ($(this).val() || !$(this).val() == '') {
+                    $('#RegionsArr').attr('disabled', false);
+                    var c = $('#CoutriesArr').val();
+                    $.ajax({
+                        url: '@Url.Action("SelectingRegions")',
+                        type: 'GET',
+                        dataType: 'json',
+                        cache: false,
+                        data: { countryName: c },
+                        success: function (regions) {
+                            $('#RegionsArr option').remove('.regionArr');
+                            $('#RegionsArr').append('<option value="" class="regionArr">Любой регион</option>');
+                            $('#RegionsArr').append('<option disabled class="regionArr">---------------------</option> ');
+                            for (var region in regions) {
+                                $('#RegionsArr').append('<option class="regionArr">' + regions[region].value + '</option>');
+                            }
+                        }
+                    })
+                }
+                else {
+                    $('#RegionsArr').attr('disabled', true);
+                    $('#RegionsArr option').remove('.regionArr');
+                    $('#RegionsArr').append('<option value="" class="regionArr">Любой регион</option>');
+                    $('#RegionsArr').append('<option disabled class="regionArr">---------------------</option> ');
+                   }
+            })
+        });
+
+        $(document).ready(function () {
+            $('#RegionsArr').change(function () {
+                if ($(this).val() || !$(this).val() == '') {
+                    $('#CitiesArr').attr('disabled', false);
+                    var c = $('#CoutriesArr').val();
+                    var r = $('#RegionsArr').val();
+                    $.ajax({
+                        url: '@Url.Action("SelectingCities")',
+                        type: 'GET',
+                        dataType: 'json',
+                        cache: false,
+                        data: { countryName: c, regionName: r},
+                        success: function (cities) {
+                            $('#CitiesArr option').remove('.cityArr');
+                            $('#CitiesArr').append('<option value="" class="cityArr">Любой город</option>');
+                            $('#CitiesArr').append('<option disabled class="cityArr">---------------------</option> ');
+                            for (var city in cities) {
+                                $('#CitiesArr').append('<option class="cityArr">' + cities[city].value + '</option>');
+                            }
+                        }
+                    })
+                }
+                else {
+                    $('#CitiesArr').attr('disabled', true);
+                    $('#CitiesArr option').remove('.cityArr');
+                    $('#CitiesArr').append('<option value="" class="cityArr">Любой город</option>');
+                    $('#CitiesArr').append('<option disabled class="cityArr">---------------------</option> ');
+                }
+            })
+        });
+
+        $(document).ready(function () {
+            $('#CoutriesDest').change(function () {
+                $('#CitiesDest').attr('disabled', true);
+                $('#CitiesDest option').remove('.cityDest');
+                $('#CitiesDest').append('<option value="" class="cityDest">Любой город</option>');
+                $('#CitiesDest').append('<option disabled class="cityDest">---------------------</option> ');
+
+                if ($(this).val() || !$(this).val() == '') {
+                    $('#RegionsDest').attr('disabled', false);
+                    var c = $('#CoutriesDest').val();
+                    $.ajax({
+                        url: '@Url.Action("SelectingRegions")',
+                        type: 'GET',
+                        dataType: 'json',
+                        cache: false,
+                        data: { countryName: c },
+                        success: function (regions) {
+                            $('#RegionsDest option').remove('.regionDest');
+                            $('#RegionsDest').append('<option value="" class="regionDest">Любой регион</option>');
+                            $('#RegionsDest').append('<option disabled class="regionDest">---------------------</option> ');
+                            for (var region in regions) {
+                                $('#RegionsDest').append('<option class="regionDest">' + regions[region].value + '</option>');
+                            }
+                        }
+                    })
+                }
+                else {
+                    $('#RegionsDest').attr('disabled', true);
+                    $('#RegionsDest option').remove('.regionDest');
+                    $('#RegionsDest').append('<option value="" class="regionDest">Любой регион</option>');
+                    $('#RegionsDest').append('<option disabled class="regionDest">---------------------</option> ');
+                }
+            })
+        });
+
+        $(document).ready(function () {
+            $('#RegionsDest').change(function () {
+                if ($(this).val() || !$(this).val() == '') {
+                    $('#CitiesDest').attr('disabled', false);
+                    var c = $('#CoutriesDest').val();
+                    var r = $('#RegionsDest').val();
+                    $.ajax({
+                        url: '@Url.Action("SelectingCities")',
+                        type: 'GET',
+                        dataType: 'json',
+                        cache: false,
+                        data: { countryName: c, regionName: r },
+                        success: function (cities) {
+                            $('#CitiesDest option').remove('.cityArr');
+                            $('#CitiesDest').append('<option value="" class="cityDest">Любой город</option>');
+                            $('#CitiesDest').append('<option disabled class="cityDest">---------------------</option> ');
+                            for (var city in cities) {
+                                $('#CitiesDest').append('<option class="cityDest">' + cities[city].value + '</option>');
+                            }
+                        }
+                    })
+                }
+                else {
+                    $('#CitiesDest').attr('disabled', true);
+                    $('#CitiesDest option').remove('.cityDest');
+                    $('#CitiesDest').append('<option value="" class="cityDest">Любой город</option>');
+                    $('#CitiesDest').append('<option disabled class="cityDest">---------------------</option> ');
+                }
+            })
+        });
+    </script>
+</body>
+</html>

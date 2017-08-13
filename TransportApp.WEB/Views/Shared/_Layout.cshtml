@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" />   
+    <link href='@Url.Content("~/Content/themes/base/all.css")' rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" media="screen"/>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>               
+                @Html.ActionLink(Resources.Resource.ShortAppTitle, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-th"></span>
+                             @Resources.Resource.MenuTitle
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/CargoesArea/Index">@Resources.Resource.CargoesTitle</a></li>
+                            <li><a href="#">@Resources.Resource.TransportTitle</a></li>
+                            <li><a href="#">@Resources.Resource.CatalogTitle</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">@Resources.Resource.ForumTitle</a></li>
+                            <li><a href="#">@Resources.Resource.NewsTitle</a></li>
+                            <li class="divider"></li>
+                            <li><a href="~/ExchangeServices/Index">@Resources.Resource.ExchangeServicesTitle</a></li>
+                            <li class="divider"></li>
+                            <li><a href="~/UserArea/UserAccount">
+                                <span class="glyphicon glyphicon-home"></span>
+                                 @Resources.Resource.UserAreaTitle
+                                </a>
+                            </li>
+                        </ul>
+                    </li>                   
+                    <li class="about">@Html.ActionLink(Resources.Resource.AboutApp, "About", "Home")</li>
+                    <li>@Html.ActionLink(Resources.Resource.Contacts, "Contact", "Home")</li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="@Resources.Resource.Search">
+                    </div>
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>                       
+                    </button>
+                </form>                               
+                @Html.Partial("_LoginPartial")                         
+            </div>            
+            
+        </div>
+    </div>    
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>            
+            <p>&copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    <script src="@Url.Content("~/Scripts/jquery-1.12.4.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.12.1.min.js")" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/js/MyFuncAutoComplete.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script src="~/Scripts/jquery.paging.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<h2>@Resources.Resource.UserAccountTitle @User.Identity.Name</h2>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 well">
+            <div class="well" style="height:245px; width:245px; padding:0px;">
+                <img src="~/Resources/person.png" alt="Avatar" class="img-circle img-responsive" 
+                     data-toggle="tooltip" data-placement="auto" title="@Resources.Resource.ChangeAvatar"
+                     style="margin-top:40px;"/>
+            </div>
+            <div class="well">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a data-toggle="pill" href="#TabGeneral">@Resources.Resource.UserAccountGeneral</a></li>
+                    <li><a data-toggle="pill" href="#TabEntries">@Resources.Resource.UserAccountEntries<span class="badge pull-right">5</span></a></li>
+                    <li><a data-toggle="pill" href="#TabMessages">@Resources.Resource.UserAccountMessages</a></li>
+                    <li><a data-toggle="pill" href="#TabEmployees">@Resources.Resource.UserAccountEmployees</a></li>
+                    <li><a data-toggle="pill" href="#TabPartners">@Resources.Resource.UserAccountPartners<span class="badge pull-right">3</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8 well" style="margin-left:20px;">
+            <div class="tab-content">
+                <div id="TabGeneral" class="tab-pane fade in active">
+                    @{Html.RenderPartial("TabGeneralPartial");}
+                </div>
+                <div id="TabEntries" class="tab-pane fade">
+                    @Html.Partial("TabEntriesPartial")
+                </div>
+                <div id="TabMessages" class="tab-pane fade">
+                    @Html.Partial("TabMessagesPartial")
+                </div>
+                <div id="TabEmployees" class="tab-pane fade">
+                    @Html.Partial("TabEmployeesPartial")
+                </div>
+                <div id="TabPartners" class="tab-pane fade">
+                    @Html.Partial("TabPartnersPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+    </script>
+
+</div>

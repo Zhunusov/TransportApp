@@ -1,0 +1,29 @@
+﻿<!-- Таблица стилей CSS -->
+h2{
+    margin: 0px;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;            
+}
+
+.carousel{
+    margin-top: 0px;
+}
+
+h1, h2, h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.carousel-inner > .active{
+    display:block;
+}
+
+.carousel-inner > .item{
+    max-width:none;
+}

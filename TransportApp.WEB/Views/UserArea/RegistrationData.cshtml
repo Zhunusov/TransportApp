@@ -1,0 +1,128 @@
+﻿@model TransportApp.WEB.Models.UserRegDataViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegistrationData</title>
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    
+    @using (Ajax.BeginForm("RegistrationData", new AjaxOptions {HttpMethod = "Post"}))
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <br />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BizName, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    @Html.EditorFor(model => model.BizName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BizName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BizUniqueNumber, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    @Html.EditorFor(model => model.BizUniqueNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BizUniqueNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br/>
+
+            <div class="form-group">
+                @Html.Label("CountryName", htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    <input id="CountryName" name="CountryName" type="text" value="@Model.CountryName"
+                           data-autocomplete-source="@Url.Action("CountrySearch")" 
+                           class="form-control text-box single-line" data-val="true" 
+                           data-val-required="@Resources.Resource.CountryNameRequired"/>
+                    @Html.ValidationMessage("CountryName", "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RegionName, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    <input id="RegionName" name="RegionName" type="text" value="@Model.RegionName"
+                           data-autocomplete-source="@Url.Action("RegionSearch")" 
+                           class="form-control text-box single-line" data-val="true" 
+                           data-val-required="@Resources.Resource.RegionNameRequired"/>
+                    @Html.ValidationMessageFor(model => model.RegionName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CityName, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    <input id="CityName" name="CityName" type="text" value="@Model.CityName"
+                           data-autocomplete-source="@Url.Action("CitySearch")" 
+                           class="form-control text-box single-line" data-val="true" 
+                           data-val-required="@Resources.Resource.CityNameRequired"/>
+                    @Html.ValidationMessageFor(model => model.CityName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BizStatus, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    @Html.DropDownListFor(m => m.BizStatus,
+                     new SelectList(new List<string>() { "Активен", "Неактивен" }),
+                     new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.BizStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.BizDescription, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div >
+                    @Html.TextAreaFor(m => m.BizDescription, new { @class = "form-control", @rows = "5" })
+                    @Html.ValidationMessageFor(model => model.BizDescription, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <input type="submit" value="@Resources.Resource.BtnSave" class="btn btn-success pull-right" style="margin-right:125px;" />
+            </div>
+        </div>
+    }
+    <script>
+        function onChangedCountry() {
+            var region = document.getElementById("RegionName");
+            var city = document.getElementById("CityName");
+            region.value = null;
+            city.value = null;
+        }
+
+        function onChangedRegion() {
+            var city = document.getElementById("CityName");
+            city.value = null;
+        }
+
+        var country = document.getElementById("CountryName");
+        var region = document.getElementById("RegionName")
+        country.addEventListener("change", onChangedCountry);
+        region.addEventListener("change", onChangedRegion);
+    </script>
+</body>
+</html>

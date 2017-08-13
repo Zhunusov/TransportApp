@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutApp" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutAppDescription" xml:space="preserve">
+    <value>Here will be located a short description of the exchange activities</value>
+  </data>
+  <data name="AboutArg" xml:space="preserve">
+    <value>Argument</value>
+  </data>
+  <data name="AboutArgDescription" xml:space="preserve">
+    <value>Some details</value>
+  </data>
+  <data name="AboutOurOffer" xml:space="preserve">
+    <value>What we offer</value>
+  </data>
+  <data name="AboutPresentation" xml:space="preserve">
+    <value>Here will be some words about transport exchange</value>
+  </data>
+  <data name="AddressDisplay" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddressRequired" xml:space="preserve">
+    <value>The  {0}  must be filled</value>
+  </data>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Transport Exchange</value>
+  </data>
+  <data name="BizDescriptionDisplay" xml:space="preserve">
+    <value>Description of activities</value>
+  </data>
+  <data name="BizNameDisplay" xml:space="preserve">
+    <value>Name of company</value>
+  </data>
+  <data name="BizNameRequired" xml:space="preserve">
+    <value>The  {0}  must be filled</value>
+  </data>
+  <data name="BizStatusDisplay" xml:space="preserve">
+    <value>Activity status</value>
+  </data>
+  <data name="BizStatusRequired" xml:space="preserve">
+    <value>The  {0}  must be filled</value>
+  </data>
+  <data name="BizUniqueNumberDisplay" xml:space="preserve">
+    <value>Unique taxpayer number</value>
+  </data>
+  <data name="BizUniqueNumberRequired" xml:space="preserve">
+    <value>The  {0}  must be filled</value>
+  </data>
+  <data name="BizUniqueNumberValidation" xml:space="preserve">
+    <value>The value of {0} must contain  {2} characters.</value>
+  </data>
+  <data name="BtnGetInTouch" xml:space="preserve">
+    <value>Get in Touch</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BtnSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="CapMax" xml:space="preserve">
+    <value>Maximum capacity</value>
+  </data>
+  <data name="CapMin" xml:space="preserve">
+    <value>Minimum capacity</value>
+  </data>
+  <data name="CargoDestination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="CargoDimentions" xml:space="preserve">
+    <value>Dimentions of the cargo</value>
+  </data>
+  <data name="CargoesTitle" xml:space="preserve">
+    <value>Cargoes</value>
+  </data>
+  <data name="CargoFilter" xml:space="preserve">
+    <value>Cargo search filter</value>
+  </data>
+  <data name="CargoLoadingPlace" xml:space="preserve">
+    <value>Loading place</value>
+  </data>
+  <data name="CargoSearch" xml:space="preserve">
+    <value>Search for the user</value>
+  </data>
+  <data name="CargoTitle" xml:space="preserve">
+    <value>Cargo of the exchange</value>
+  </data>
+  <data name="CatalogTitle" xml:space="preserve">
+    <value>Catalog of companies</value>
+  </data>
+  <data name="ChangeAvatar" xml:space="preserve">
+    <value>Change profile image</value>
+  </data>
+  <data name="ChooseCity" xml:space="preserve">
+    <value>Any city</value>
+  </data>
+  <data name="ChooseRegion" xml:space="preserve">
+    <value>Any region</value>
+  </data>
+  <data name="CityNameDisplay" xml:space="preserve">
+    <value>Settlement</value>
+  </data>
+  <data name="CityNameRequired" xml:space="preserve">
+    <value>The 'Settlement'  must be filled</value>
+  </data>
+  <data name="Code2" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="ConfirmPasswordCompare" xml:space="preserve">
+    <value>Password and confirmation do not match</value>
+  </data>
+  <data name="ConfirmPasswordDisplay" xml:space="preserve">
+    <value>Password confirmation</value>
+  </data>
+  <data name="ContactComment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ContactDescription" xml:space="preserve">
+    <value>Contact us and we'll get back to you</value>
+  </data>
+  <data name="ContactLocation" xml:space="preserve">
+    <value>Minsk, Belarus</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="CountryNameDisplay" xml:space="preserve">
+    <value>Country (location)</value>
+  </data>
+  <data name="CountryNameRequired" xml:space="preserve">
+    <value>The 'Country (location)'  must be filled</value>
+  </data>
+  <data name="EmailDisplay" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailExceptionUnknown" xml:space="preserve">
+    <value>Unknown email</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>The {0}  must be filled</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>The {0}  does not contain a valid email address.</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>There was an error processing your request</value>
+  </data>
+  <data name="ExchangeServicesTitle" xml:space="preserve">
+    <value>Exchange Services</value>
+  </data>
+  <data name="ForumTitle" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="HeadSlide1" xml:space="preserve">
+    <value>Here will be a title of slide 1</value>
+  </data>
+  <data name="HeadSlide2" xml:space="preserve">
+    <value>Here will be a title of slide 2</value>
+  </data>
+  <data name="HeadSlide3" xml:space="preserve">
+    <value>Here will be a title of slide 3</value>
+  </data>
+  <data name="IndexHeaderHomePage" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LoginDescription" xml:space="preserve">
+    <value>Use the account to log on</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Log on</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MenuTitle" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>Exchange news</value>
+  </data>
+  <data name="PanelContent" xml:space="preserve">
+    <value>Here will be placed content of the panel</value>
+  </data>
+  <data name="PanelTitle" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="PasswordDisplay" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordExceptionIncorrect" xml:space="preserve">
+    <value>Incorrect password</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>The {0}  must be filled</value>
+  </data>
+  <data name="PasswordValidation" xml:space="preserve">
+    <value>The value of {0} must contain not less than {2} characters.</value>
+  </data>
+  <data name="PricingPaymentPlan" xml:space="preserve">
+    <value>Choose a payment plan that works for you</value>
+  </data>
+  <data name="PricingTitle" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="RegionNameDisplay" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="RegionNameRequired" xml:space="preserve">
+    <value>The 'Region'  must be filled</value>
+  </data>
+  <data name="RegisterBtnTitle" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="RegisterDescription" xml:space="preserve">
+    <value>Create new account</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="RememberMeDisplay" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="SeachPeriod" xml:space="preserve">
+    <value>Seach period</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SelectCountryDestination" xml:space="preserve">
+    <value>Select destination country</value>
+  </data>
+  <data name="SelectCountryDispatch" xml:space="preserve">
+    <value>Select the country of dispatch</value>
+  </data>
+  <data name="ShortAppTitle" xml:space="preserve">
+    <value>T-Exch</value>
+  </data>
+  <data name="SignInBtn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="SignOutBtn" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="SuccessfulRegistrationTitle" xml:space="preserve">
+    <value>Congratulations on your successful registration</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="TextSlide1" xml:space="preserve">
+    <value>Description of slide 1</value>
+  </data>
+  <data name="TextSlide2" xml:space="preserve">
+    <value>Description of slide 2</value>
+  </data>
+  <data name="TextSlide3" xml:space="preserve">
+    <value>Description of slide 3</value>
+  </data>
+  <data name="TransportTitle" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="UserAccountEmployees" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="UserAccountEmployeesAll" xml:space="preserve">
+    <value>All employees</value>
+  </data>
+  <data name="UserAccountEmployeesInfo" xml:space="preserve">
+    <value>Imformation about employees</value>
+  </data>
+  <data name="UserAccountEntries" xml:space="preserve">
+    <value>My Entries</value>
+  </data>
+  <data name="UserAccountEntriesCargo" xml:space="preserve">
+    <value>Cargo entries</value>
+  </data>
+  <data name="UserAccountEntriesTransport" xml:space="preserve">
+    <value>Transport entries</value>
+  </data>
+  <data name="UserAccountGeneral" xml:space="preserve">
+    <value>General information</value>
+  </data>
+  <data name="UserAccountGeneralActivities" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="UserAccountGeneralContacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="UserAccountGeneralDoc" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="UserAccountGeneralOther" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="UserAccountGeneralRegData" xml:space="preserve">
+    <value>Registration data</value>
+  </data>
+  <data name="UserAccountMessages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="UserAccountMessagesIncoming" xml:space="preserve">
+    <value>Incoming messages</value>
+  </data>
+  <data name="UserAccountMessagesOutgoing" xml:space="preserve">
+    <value>Outgoing messages</value>
+  </data>
+  <data name="UserAccountMessagesUnread" xml:space="preserve">
+    <value>Unread messages</value>
+  </data>
+  <data name="UserAccountPartners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="UserAccountPartnersIncOffes" xml:space="preserve">
+    <value>Incoming partnership offers</value>
+  </data>
+  <data name="UserAccountPartnersMy" xml:space="preserve">
+    <value>My partners</value>
+  </data>
+  <data name="UserAccountPartnersOutOffes" xml:space="preserve">
+    <value>Outgoing partnership offers</value>
+  </data>
+  <data name="UserAccountTitle" xml:space="preserve">
+    <value>The personal user account</value>
+  </data>
+  <data name="UserAreaTitle" xml:space="preserve">
+    <value>User Account</value>
+  </data>
+  <data name="UserEmailExisted" xml:space="preserve">
+    <value>This e-mail is already in use</value>
+  </data>
+  <data name="UserExceptionNotFound" xml:space="preserve">
+    <value>User is not found</value>
+  </data>
+  <data name="WeightMax" xml:space="preserve">
+    <value>Maximum weight, tons</value>
+  </data>
+  <data name="WeightMin" xml:space="preserve">
+    <value>Minimum weight, tons</value>
+  </data>
+</root>
