@@ -1,0 +1,52 @@
+# Ignore file for Visual Studio 2008
+# use glob syntax
+syntax: glob
+# Ignore Visual Studio 2008 files
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+[Bb]in
+[Dd]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]humbs.db
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.resharper
+*.orig
+*Backup/*
+
+packages/
+TestResults/
+TransportApp.BLL/bin/
+TransportApp.BLL/BusinessModels/
+TransportApp.BLL/obj/
+TransportApp.BLL/*.cd
+TransportApp.DAL/bin/
+TransportApp.DAL/EDM/
+TransportApp.DAL/obj/
+TransportApp.DAL/*.cd
+TransportApp.DAL.UnitTest/
+TransportApp.WEB/bin/
+TransportApp.WEB/obj/
+TransportApp.WEB/*.cd
+
